@@ -1,0 +1,14 @@
+Top 5 topics
+Breath first search
+Depth first search
+Dynamic programming
+Backtracking
+Two pointer
+
+
+Study log WW47
+
+11/18:
+Morning session:
+-went over problem 624 - maximum distance in arrays
+-started reading up on space complexity analysis
