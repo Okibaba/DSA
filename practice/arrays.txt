@@ -6,3 +6,49 @@ You can pick up two integers from two different arrays (each array picks one) an
 
 Return the maximum distance.
 
+
+approach 1
+
+class Solution(object):
+    def maxDistance(self, arrays):
+        """
+        :type arrays: List[List[int]]
+        :rtype: int
+        """
+        #flatten and find global max & min
+        flattened_array=[item for sublist in arrays for item in sublist]
+        max_item= max(flattened_array)
+        #min_item=min(flattened_array)
+        
+        #initialize variables
+        array_temp=[]
+        result_array=[]
+        i=0
+        #find another min that excludes the max element
+        
+        for i in range(len(arrays)):
+            if max(arrays[i])==max_item:
+               array_temp= self.min_exclude_index(i,arrays)
+               min_item=min([item for sublist in array_temp for item in sublist])
+               result_array.append(max_item - min_item)  
+
+
+        #compute difference between max and min
+        max_distance=max(result_array)
+        return max_distance
+
+    def min_exclude_index(self, index_of_array_to_exclude, arrays):
+        idx=index_of_array_to_exclude
+        updated_array=arrays[0:idx] + arrays[idx+1:]
+        return updated_array
+
+arrays = [[1],[1]]
+sol=Solution()
+result_=sol.maxDistance(arrays)
+print(result_)
+
+        
+        
+
+        
+
