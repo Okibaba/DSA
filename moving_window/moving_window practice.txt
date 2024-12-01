@@ -1,0 +1,34 @@
+
+
+
+
+class Solution:
+  def findLength(self, str1, k):
+      max_length = 0
+      char_frequency={}
+      window_start=0
+      
+
+      for window_end in range(len(str1)):
+        end_char=str1[window_end]
+        #check if char already in char_dict
+        if end_char not in char_frequency:
+          char_frequency[end_char]=0
+        char_frequency[end_char]+=1
+
+        while len(char_frequency)>k:
+          start_char=str1[window_start]
+          #move window one step and remove a count of item from char_freq dictionary
+          char_frequency[start_char]-=1
+          if char_frequency[start_char]==0:
+            del char_frequency[start_char]
+          window_start+=1 # q: how am i guaranteed that this always exist? i.e window_start is alwayw less than window_end
+        
+        max_length= max(max_length, window_end-window_start+1)
+
+      return max_length
+
+          
+
+
+
