@@ -6,6 +6,11 @@ Backtracking
 Two pointer
 
 
+
+arrays strings hashing are top priority.
+
+1d-dp/greedy is second priority for oa’s.
+
 Study log WW47
 
 11/18:
