@@ -17,3 +17,9 @@ Study log WW47
 Morning session:
 -went over problem 624 - maximum distance in arrays
 -started reading up on space complexity analysis
+
+
+
+video on how to grind for LC
+
+https://www.youtube.com/watch?v=sLJ6p5rSnuo
