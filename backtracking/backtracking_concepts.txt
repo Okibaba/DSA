@@ -1,0 +1,5 @@
+#
+-have an early stopping/false condition(s)
+-have your base/success case(s)
+-prune items
+-solution space exploration
