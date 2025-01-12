@@ -3,3 +3,4 @@
 -have your base/success case(s)
 -prune items
 -solution space exploration
+-choose next item/recursion pivot
