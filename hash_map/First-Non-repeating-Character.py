@@ -11,7 +11,8 @@ class Solution:
         for index,key in enumerate(word):
             if word[key]==1:
                 return index
-
+#word.values()
+#word.items()
         
         return -1
 
